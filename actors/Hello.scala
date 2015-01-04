@@ -9,8 +9,18 @@ object SillyActor extends Actor {
     }
 }
 
+object SeriousActor extends Actor {
+    def act() {
+        for (i <- 1 to 5) {
+            println("To be or not to be.")
+            Thread.sleep(1000)
+        }
+    }
+}
+
 object Hello {
     def main(args: Array[String]) {
         SillyActor.start()
+        SeriousActor.start()
     }
 }
